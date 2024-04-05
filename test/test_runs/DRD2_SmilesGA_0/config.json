@@ -1,0 +1,21 @@
+{
+    "scoring_function_name": "DRD2",
+    "optimizer_name": "SmilesGA",
+    "optimizer_args": {
+        "gene_size": 222,
+        "generations": 1000000000000000,
+        "n_jobs": 8,
+        "n_mutations": 293,
+        "patience": 1000000000000000,
+        "population_size": 116,
+        "random_start": true,
+        "smi_file": "data/guacamol_v1_all.smiles"
+    },
+    "memory_score_threshold": 0.5,
+    "memory_distance_threshold": 0.7,
+    "time_budget": 1,
+    "use_property_constraints": true,
+    "memory_known_active_init": false,
+    "n_jobs_scoring_function": 8,
+    "sample_budget": 10
+}

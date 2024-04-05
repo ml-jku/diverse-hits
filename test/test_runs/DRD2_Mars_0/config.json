@@ -1,0 +1,18 @@
+{
+    "scoring_function_name": "DRD2",
+    "optimizer_name": "Mars",
+    "optimizer_args": {
+        "num_mols": 248,
+        "batch_size": 434,
+        "n_layers": 1,
+        "sampler": "sa",
+        "proposal": "mix"
+    },
+    "memory_score_threshold": 0.5,
+    "memory_distance_threshold": 0.7,
+    "time_budget": 1,
+    "use_property_constraints": true,
+    "memory_known_active_init": false,
+    "n_jobs_scoring_function": 8,
+    "sample_budget": 10
+}

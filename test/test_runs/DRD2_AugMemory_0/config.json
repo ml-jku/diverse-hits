@@ -1,0 +1,21 @@
+{
+    "scoring_function_name": "DRD2",
+    "optimizer_name": "AugMemory",
+    "optimizer_args": {
+        "batch_size": 42,
+        "sigma": 490.0378720848186,
+        "replay_buffer_size": 45,
+        "augmented_memory": true,
+        "augmentation_rounds": 2,
+        "learning_rate": 0.00012850018083562925,
+        "pretrained_model_path": null,
+        "n_steps": 1000000
+    },
+    "memory_score_threshold": 0.5,
+    "memory_distance_threshold": 0.7,
+    "time_budget": 1,
+    "use_property_constraints": true,
+    "memory_known_active_init": false,
+    "n_jobs_scoring_function": 8,
+    "sample_budget": 10
+}

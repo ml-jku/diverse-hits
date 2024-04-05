@@ -1,0 +1,19 @@
+{
+    "scoring_function_name": "DRD2",
+    "optimizer_name": "BestAgentReminder",
+    "optimizer_args": {
+        "batch_size": 185,
+        "sigma": 127.55218180467342,
+        "alpha": 0.5914234919797947,
+        "learning_rate": 0.000253015531734927,
+        "pretrained_model_path": null,
+        "n_steps": 1000000
+    },
+    "memory_score_threshold": 0.5,
+    "memory_distance_threshold": 0.7,
+    "time_budget": 1,
+    "use_property_constraints": true,
+    "memory_known_active_init": false,
+    "n_jobs_scoring_function": 8,
+    "sample_budget": 10
+}

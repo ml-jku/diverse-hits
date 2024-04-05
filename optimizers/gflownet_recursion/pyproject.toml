@@ -1,0 +1,102 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.distutils.bdist_wheel]
+universal = "true"
+
+[tool.bandit]
+# B101 tests the use of assert
+# B301 and B403 test the use of pickle
+skips = ["B101", "B301", "B403"]
+exclude_dirs = ["tests", ".tox", ".venv"]
+
+[tool.pytest.ini_options]
+addopts = [
+    "-v",
+    "-x",
+    "--color=yes",
+    "--cov-report=term-missing",
+    "--cov=gflownet",
+    "--typeguard-packages=ml_kit,tests"
+]
+testpaths = ["tests"]
+pythonpath = "src/"
+
+[tool.mypy]
+ignore_missing_imports = true
+show_error_codes = true
+show_error_context = true
+show_traceback = true
+strict = false
+strict_optional = false
+implicit_reexport = true
+allow_redefinition = true
+files = "src"
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+allow_untyped_defs = true
+allow_incomplete_defs = true
+
+[tool.isort]
+profile = "black"
+py_version = "auto"
+line_length = 120
+
+[tool.black]
+line-length = 120
+target-version = ["py311"]
+
+[project]
+name = "gflownet"
+readme = "README.md"
+classifiers = ["Operating System :: OS Independent", "Programming Language :: Python", "Programming Language :: Python :: 3"]
+keywords = ["gflownet"]
+requires-python = ">=3.8,<3.10"
+dynamic = ["version"]
+dependencies = [
+    "scikit-learn==1.3.0",
+    "torch==1.13.1",
+    "torch-geometric",
+    "torch-scatter",
+    "torch-sparse",
+    "torch-cluster",
+    "rdkit",
+    "tables",
+    "scipy",
+    "networkx",
+    "tensorboard",
+    "cvxopt",
+    "pyarrow",
+    "gitpython",
+    "botorch",
+    "pyro-ppl",
+    "gpytorch",
+    "omegaconf>=2.3",
+    "pandas",
+]
+
+[project.optional-dependencies]
+dev = [
+    "bandit[toml]",
+    "black",
+    "isort",
+    "mypy",
+    "pip-compile-multi",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "typeguard",
+    "types-pkg_resources",
+    # Security pin
+    "gitpython>=3.1.30",
+]
+
+[[project.authors]]
+name = "Recursion Pharmaceuticals"
+email = "devs@recursionpharma.com"
+
+[tool.ruff]
+line-length = 120

@@ -1,0 +1,19 @@
+{
+    "scoring_function_name": "DRD2",
+    "optimizer_name": "AugHC",
+    "optimizer_args": {
+        "batch_size": 388,
+        "sigma": 355.84889718549664,
+        "topk": 0.33970806022576816,
+        "learning_rate": 0.00041734950263609525,
+        "pretrained_model_path": null,
+        "n_steps": 1000000
+    },
+    "memory_score_threshold": 0.5,
+    "memory_distance_threshold": 0.7,
+    "time_budget": 1,
+    "use_property_constraints": true,
+    "memory_known_active_init": false,
+    "n_jobs_scoring_function": 8,
+    "sample_budget": 10
+}

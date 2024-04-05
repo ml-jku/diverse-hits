@@ -1,0 +1,18 @@
+{
+    "scoring_function_name": "DRD2",
+    "optimizer_name": "Gflownet",
+    "optimizer_args": {
+        "num_training_steps": 1000000000000000,
+        "learning_rate": 1.0031898068857825e-05,
+        "momentum": 0.7093458715636001,
+        "num_workers": 8,
+        "sampling_tau": 0.8723131218423595
+    },
+    "memory_score_threshold": 5.0,
+    "memory_distance_threshold": 0.7,
+    "time_budget": 25,
+    "use_property_constraints": true,
+    "memory_known_active_init": false,
+    "n_jobs_scoring_function": 1,
+    "sample_budget": 10
+}

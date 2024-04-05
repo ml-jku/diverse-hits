@@ -1,0 +1,16 @@
+name: divopt
+channels:
+  - defaults
+  - dglteam/label/cu117
+dependencies:
+  - python=3.11.3
+  - pip
+  - pip:
+    - torch==2.0.1
+    - charset-normalizer==2.1.0
+    - "deepsmiles"
+    - "selfies"
+    - "PyTDC"
+    - "nltk"
+    - "guacamol"
+  - dgl

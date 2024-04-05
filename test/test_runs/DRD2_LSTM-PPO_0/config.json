@@ -1,0 +1,20 @@
+{
+    "scoring_function_name": "DRD2",
+    "optimizer_name": "LSTM-PPO",
+    "optimizer_args": {
+        "batch_size": 670,
+        "clip_param": 0.49408230616892646,
+        "entropy_weight": 0.17082622336313452,
+        "episode_size": 3014,
+        "kl_div_weight": 4,
+        "num_epochs": 1000000000000000,
+        "pretrained_model_path": "./optimizers/guacamol_baselines/smiles_lstm_ppo/pretrained_model/model_final_0.473.pt"
+    },
+    "memory_score_threshold": 0.5,
+    "memory_distance_threshold": 0.7,
+    "time_budget": 1,
+    "use_property_constraints": true,
+    "memory_known_active_init": false,
+    "n_jobs_scoring_function": 8,
+    "sample_budget": 10
+}

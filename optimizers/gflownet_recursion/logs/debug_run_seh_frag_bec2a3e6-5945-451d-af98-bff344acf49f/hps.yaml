@@ -1,0 +1,127 @@
+log_dir: ./logs/debug_run_seh_frag_bec2a3e6-5945-451d-af98-bff344acf49f
+device: cpu
+seed: 0
+validate_every: 1000
+checkpoint_every: null
+print_every: 100
+start_at_step: 0
+num_final_gen_steps: null
+num_training_steps: 10000
+num_workers: 8
+hostname: student06
+pickle_mp_messages: false
+git_hash: 2f9d43b
+overwrite_existing_exp: true
+algo:
+  method: TB
+  global_batch_size: 64
+  max_len: 128
+  max_nodes: 9
+  max_edges: 128
+  illegal_action_logreward: -75.0
+  offline_ratio: 0.0
+  valid_offline_ratio: 0.0
+  train_random_action_prob: 0.0
+  valid_random_action_prob: 0.0
+  valid_sample_cond_info: true
+  sampling_tau: 0.99
+  tb:
+    bootstrap_own_reward: false
+    epsilon: null
+    reward_loss_multiplier: 1.0
+    variant: TB
+    do_correct_idempotent: false
+    do_parameterize_p_b: false
+    do_length_normalize: false
+    subtb_max_len: 128
+    Z_learning_rate: 0.001
+    Z_lr_decay: 50000.0
+    cum_subtb: true
+  moql:
+    gamma: 1.0
+    num_omega_samples: 32
+    num_objectives: 2
+    lambda_decay: 10000
+    penalty: -10.0
+  a2c:
+    entropy: 0.01
+    gamma: 1.0
+    penalty: -10.0
+  fm:
+    epsilon: 1.0e-38
+    balanced_loss: false
+    leaf_coef: 10.0
+    correct_idempotent: false
+  sql:
+    alpha: 0.01
+    gamma: 1.0
+    penalty: -10.0
+model:
+  num_layers: 4
+  num_emb: 128
+  dropout: 0.0
+  graph_transformer:
+    num_heads: 2
+    ln_type: pre
+    num_mlp_layers: 0
+  seq_transformer:
+    num_heads: 2
+    posenc: Rotary
+opt:
+  opt: adam
+  learning_rate: 0.0001
+  lr_decay: 20000.0
+  weight_decay: 1.0e-08
+  momentum: 0.9
+  clip_grad_type: norm
+  clip_grad_param: 10.0
+  adam_eps: 1.0e-08
+replay:
+  use: false
+  capacity: 10000
+  warmup: 1000
+  hindsight_ratio: 0.0
+task:
+  qm9:
+    h5_path: ./data/qm9/qm9.h5
+    model_path: ./data/qm9/qm9_model.pt
+  seh: {}
+  seh_moo:
+    use_steer_thermometer: false
+    preference_type: dirichlet
+    focus_type: null
+    focus_dirs_listed: null
+    focus_cosim: 0.0
+    focus_limit_coef: 1.0
+    focus_model_training_limits: null
+    focus_model_state_space_res: null
+    max_train_it: null
+    n_valid: 15
+    n_valid_repeats: 128
+    objectives:
+    - seh
+    - qed
+    - sa
+    - mw
+cond:
+  temperature:
+    sample_dist: uniform
+    dist_params:
+    - 0
+    - 64.0
+    num_thermometer_dim: 32
+  moo:
+    num_objectives: 2
+    num_thermometer_dim: 16
+  weighted_prefs:
+    preference_type: dirichlet
+  focus_region:
+    focus_type: learned-tabular
+    use_steer_thermomether: false
+    focus_cosim: 0.98
+    focus_limit_coef: 0.1
+    focus_model_training_limits:
+    - 0.25
+    - 0.75
+    focus_model_state_space_res: 30
+    max_train_it: 20000

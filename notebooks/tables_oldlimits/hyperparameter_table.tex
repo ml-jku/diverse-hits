@@ -1,0 +1,64 @@
+%chktex-file 36
+\begin{tabular}{lllrrrrrr}
+\toprule
+ &  & Limit & \multicolumn{3}{c}{Samples} & \multicolumn{3}{c}{Time} \\
+\cmidrule(lr){4-6} \cmidrule(lr){7-9}
+Optimizer & Parameter & Search Space & DRD2 & GSK3$\beta$ & JNK3 & DRD2 & GSK3$\beta$ & JNK3 \\
+\midrule
+\multirow[t]{4}{*}{AugHC} & \texttt{batch\_size} & RandInt(128, 512) & 311 & 219 & 311 & 311 & 487 & 311 \\
+ & \texttt{learning\_rate} & LogUniform($10^{-4}, 10^{-3}$) & \num{2.11e-04} & \num{2.11e-04} & \num{2.11e-04} & \num{2.11e-04} & \num{2.74e-04} & \num{2.11e-04} \\
+ & \texttt{sigma} & Uniform(100.0, 500.0) & 186.62 & 400.27 & 186.62 & 186.62 & 269.46 & 186.62 \\
+ & \texttt{topk} & Uniform(0.15, 0.35) & 0.18 & 0.27 & 0.18 & 0.18 & 0.28 & 0.18 \\
+\midrule
+\multirow[t]{5}{*}{AugMemory} & \texttt{augmentation\_rounds} & RandInt(1, 7) & 5 & 1 & 2 & 1 & 1 & 1 \\
+ & \texttt{batch\_size} & RandInt(32, 128) & 107 & 90 & 90 & 90 & 90 & 90 \\
+ & \texttt{learning\_rate} & LogUniform($10^{-4}, 10^{-3}$) & \num{1.45e-04} & \num{2.47e-04} & \num{1.26e-04} & \num{2.47e-04} & \num{2.47e-04} & \num{2.47e-04} \\
+ & \texttt{replay\_buffer\_size} & RandInt(32, 128) & 100 & 71 & 33 & 71 & 71 & 71 \\
+ & \texttt{sigma} & Uniform(100.0, 500.0) & 495.35 & 291.07 & 345.23 & 291.07 & 291.07 & 291.07 \\
+\midrule
+\multirow[t]{4}{*}{BestAgentReminder} & \texttt{alpha} & Uniform(0.3, 0.7) & 0.44 & 0.56 & 0.64 & 0.51 & 0.65 & 0.64 \\
+ & \texttt{batch\_size} & RandInt(16, 256) & 148 & 119 & 188 & 232 & 213 & 188 \\
+ & \texttt{learning\_rate} & LogUniform($10^{-4}, 10^{-3}$) & \num{2.74e-04} & \num{2.74e-04} & \num{7.21e-04} & \num{4.77e-04} & \num{9.52e-04} & \num{7.21e-04} \\
+ & \texttt{sigma} & Uniform(100.0, 500.0) & 372.73 & 269.46 & 337.14 & 420.36 & 411.26 & 337.14 \\
+\midrule
+\multirow[t]{3}{*}{GA} & \texttt{mutation\_rate} & LogUniform($10^{-3}, 10^{-1}$) & \num{1.98e-02} & \num{1.23e-02} & \num{3.60e-02} & \num{4.70e-02} & \num{6.07e-02} & \num{3.60e-02} \\
+ & \texttt{offspring\_size} & RandInt(50, 500) & 315 & 301 & 247 & 215 & 137 & 247 \\
+ & \texttt{population\_size} & RandInt(50, 500) & 122 & 373 & 293 & 387 & 342 & 293 \\
+\midrule
+\multirow[t]{3}{*}{Gflownet} & \texttt{learning\_rate} & LogUniform($10^{-5}, 10^{-3}$) & \num{3.60e-04} & \num{1.37e-04} & \num{1.37e-04} & \num{3.60e-04} & \num{1.37e-04} & \num{1.37e-04} \\
+ & \texttt{momentum} & Uniform(0.5, 0.9) & 0.85 & 0.51 & 0.87 & 0.85 & 0.51 & 0.87 \\
+ & \texttt{sampling\_tau} & Uniform(0.8, 0.99) & 0.99 & 0.92 & 0.81 & 0.99 & 0.92 & 0.81 \\
+\midrule
+\multirow[t]{3}{*}{GflownetDF} & \texttt{learning\_rate} & LogUniform($10^{-5}, 10^{-3}$) & \num{3.97e-04} & \num{3.60e-04} & \num{1.25e-04} & \num{3.97e-04} & \num{3.60e-04} & \num{1.25e-04} \\
+ & \texttt{momentum} & Uniform(0.5, 0.9) & 0.68 & 0.85 & 0.79 & 0.68 & 0.85 & 0.79 \\
+ & \texttt{sampling\_tau} & Uniform(0.8, 0.99) & 0.95 & 0.99 & 0.91 & 0.95 & 0.99 & 0.91 \\
+\midrule
+\multirow[t]{2}{*}{LSTM-HC} & \texttt{mols\_to\_sample} & RandInt(8, 2048) & 322 & 322 & 322 & 1836 & 1836 & 692 \\
+ & \texttt{optimize\_n\_epochs} & RandInt(1, 6) & 2 & 2 & 2 & 1 & 1 & 1 \\
+\midrule
+\multirow[t]{5}{*}{LSTM-PPO} & \texttt{batch\_size} & RandInt(64, 1024) & 914 & 211 & 195 & 914 & 841 & 681 \\
+ & \texttt{clip\_param} & Uniform(0.1, 0.6) & 0.34 & 0.16 & 0.60 & 0.34 & 0.42 & 0.32 \\
+ & \texttt{entropy\_weight} & Uniform(0.01, 1.0) & 0.80 & 0.64 & 0.59 & 0.80 & 0.37 & 0.62 \\
+ & \texttt{episode\_size} & RandInt(64, 4096) & 861 & 3401 & 3982 & 861 & 3845 & 321 \\
+ & \texttt{kl\_div\_weight} & RandInt(1, 10) & 4 & 1 & 5 & 4 & 1 & 2 \\
+\midrule
+\multirow[t]{3}{*}{Mars} & \texttt{batch\_size} & RandInt(64, 512) & 261 & 152 & 163 & 468 & 152 & 163 \\
+ & \texttt{n\_layers} & RandInt(1, 4) & 3 & 1 & 1 & 1 & 1 & 1 \\
+ & \texttt{num\_mols} & RandInt(32, 512) & 275 & 504 & 370 & 297 & 504 & 370 \\
+\midrule
+\multirow[t]{3}{*}{Mimosa} & \texttt{lamb} & Uniform(0.1, 10.0) & 7.83 & 6.52 & 7.18 & 7.83 & 6.52 & 7.18 \\
+ & \texttt{population\_size} & RandInt(50, 200) & 79 & 59 & 97 & 79 & 59 & 97 \\
+ & \texttt{train\_epoch} & RandInt(1, 10) & 8 & 1 & 4 & 8 & 1 & 4 \\
+\midrule
+\multirow[t]{4}{*}{Reinvent} & \texttt{batch\_size} & RandInt(256, 512) & 403 & 257 & 257 & 507 & 388 & 507 \\
+ & \texttt{experience\_replay} & RandInt(0, 64) & 19 & 56 & 56 & 3 & 15 & 3 \\
+ & \texttt{learning\_rate} & LogUniform($10^{-5}, 10^{-2}$) & \num{2.50e-03} & \num{1.11e-03} & \num{1.11e-03} & \num{4.43e-04} & \num{6.86e-04} & \num{4.43e-04} \\
+ & \texttt{sigma} & Uniform(100.0, 600.0) & 330.74 & 279.75 & 279.75 & 457.59 & 408.47 & 457.59 \\
+\midrule
+\multirow[t]{3}{*}{SmilesGA} & \texttt{gene\_size} & RandInt(100, 600) & 247 & 292 & 199 & 247 & 199 & 199 \\
+ & \texttt{n\_mutations} & RandInt(100, 300) & 247 & 167 & 277 & 247 & 277 & 277 \\
+ & \texttt{population\_size} & RandInt(50, 200) & 192 & 153 & 79 & 192 & 79 & 79 \\
+\midrule
+Stoned & \texttt{generation\_size} & RandInt(50, 1000) & 757 & 854 & 773 & 734 & 854 & 773 \\
+\bottomrule
+\end{tabular}

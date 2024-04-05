@@ -1,0 +1,129 @@
+{
+    "GA": {
+        "smi_file": "./data/guacamol_v1_valid.smiles",
+        "population_size": 100,
+        "offspring_size": 200,
+        "generations": 1000000000000000,
+        "mutation_rate": 0.01,
+        "n_jobs": -1,
+        "random_start": true,
+        "patience": 1000000000000000,
+        "canonicalize": false
+    },
+    "VS": {
+        "smiles_file": "./data/guacamol_v1_all.smiles",
+        "batch_size": 2048,
+        "shuffle": false
+    },
+    "LSTM-HC": {
+        "pretrained_model_path": "./optimizers/guacamol_baselines/smiles_lstm_hc/pretrained_model/model_final_0.473.pt",
+        "n_epochs": 1000000000000000,
+        "mols_to_sample": 1028,
+        "keep_top": 512,
+        "optimize_n_epochs": 1,
+        "max_len": 100,
+        "optimize_batch_size": 64,
+        "number_final_samples": 1024,
+        "sample_final_model_only": false,
+        "random_start": true,
+        "smi_file": "./data/guacamol_v1_train.smiles",
+        "n_jobs": -1,
+        "canonicalize": false
+    },
+    "GraphMCTS": {
+        "pickle_directory": "./optimizers/guacamol_baselines/graph_mcts",
+        "n_jobs": -1,
+        "num_sims": 40,
+        "max_children": 25,
+        "init_smiles": "CC",
+        "max_atoms": 60,
+        "patience": 1000000000000000,
+        "generations": 1000000000000000,
+        "population_size": 100
+    },
+    "LSTM-PPO": {
+        "batch_size": 512,
+        "clip_param": 0.2,
+        "entropy_weight": 1,
+        "episode_size": 4096,
+        "kl_div_weight": 10,
+        "num_epochs": 1000000000000000,
+        "pretrained_model_path": "./optimizers/guacamol_baselines/smiles_lstm_ppo/pretrained_model/model_final_0.473.pt"
+    },
+    "SmilesGA": {
+        "gene_size": 300,
+        "generations": 1000000000000000,
+        "n_jobs": -1,
+        "n_mutations": 200,
+        "patience": 1000000000000000,
+        "population_size": 100,
+        "random_start": true,
+        "smi_file": "data/guacamol_v1_all.smiles"
+    },
+    "Stoned": {
+        "generation_size": 500,
+        "smi_file": "./data/guacamol_v1_all.smiles",
+        "iterations": 1000000000000000
+    },
+    "Reinvent": {
+        "learning_rate": 0.0005,
+        "sigma": 500,
+        "experience_replay": 32,
+        "batch_size": 512
+    },
+    "Mars": {
+        "num_mols": 64,
+        "batch_size": 128,
+        "n_layers": 3,
+        "sampler": "sa",
+        "proposal": "mix"
+    },
+    "Mimosa": {
+        "population_size": 50,
+        "offspring_size": 500,
+        "lamb": 0.1,
+        "train_epoch": 3,
+        "train_data_size": 800,
+        "smi_file": "data/guacamol_v1_all.smiles"
+    },
+    "Gflownet": {
+        "num_training_steps": 1000000000000000,
+        "learning_rate": 0.0001,
+        "momentum": 0.9,
+        "num_workers": 8,
+        "sampling_tau": 0.99
+    },
+    "GflownetDF": {
+        "num_training_steps": 1000000000000000,
+        "learning_rate": 0.0001,
+        "momentum": 0.9,
+        "num_workers": 8,
+        "sampling_tau": 0.99
+    },
+    "AugHC": {
+        "batch_size": 256,
+        "sigma": 120,
+        "topk": 0.25,
+        "learning_rate": 0.0005,
+        "pretrained_model_path": null,
+        "n_steps": 1000000
+    },
+    "BestAgentReminder": {
+        "batch_size": 256,
+        "sigma": 120,
+        "alpha": 0.5,
+        "learning_rate": 0.0005,
+        "pretrained_model_path": null,
+        "n_steps": 1000000
+    },
+    "AugMemory": {
+        "batch_size": 64,
+        "sigma": 500,
+        "replay_buffer_size": 64,
+        "augmented_memory": true,
+        "augmentation_rounds": 2,
+        "learning_rate": 0.0005,
+        "pretrained_model_path": null,
+        "n_steps": 1000000
+    }
+}

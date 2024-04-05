@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/recursionpharma/gflownet.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "trunk"]
+	remote = origin
+	merge = refs/heads/trunk

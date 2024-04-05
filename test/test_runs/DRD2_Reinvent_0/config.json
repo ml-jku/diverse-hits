@@ -1,0 +1,17 @@
+{
+    "scoring_function_name": "DRD2",
+    "optimizer_name": "Reinvent",
+    "optimizer_args": {
+        "learning_rate": 0.008918707782743701,
+        "sigma": 551.065607402116,
+        "experience_replay": 55,
+        "batch_size": 459
+    },
+    "memory_score_threshold": 0.5,
+    "memory_distance_threshold": 0.7,
+    "time_budget": 1,
+    "use_property_constraints": true,
+    "memory_known_active_init": false,
+    "n_jobs_scoring_function": 8,
+    "sample_budget": 10
+}

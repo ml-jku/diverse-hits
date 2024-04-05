@@ -1,0 +1,22 @@
+{
+  "train_smiles": "../../data/guacamol_v1_all.smiles",
+  "output_directory": "/publicwork/students/renz/diverse-efficiency/optimizers/smiles_rnn/prior",
+  "suffix": "mymodel",
+  "grammar": "SMILES",
+  "randomize": false,
+  "smizip_ngrams": null,
+  "valid_smiles": null,
+  "test_smiles": null,
+  "validate_frequency": 500,
+  "n_epochs": 5,
+  "batch_size": 128,
+  "device": "gpu",
+  "model": "RNN",
+  "layer_size": 512,
+  "num_layers": 3,
+  "cell_type": "gru",
+  "embedding_layer_size": 256,
+  "dropout": 0.0,
+  "learning_rate": 0.001,
+  "layer_normalization": false
+}

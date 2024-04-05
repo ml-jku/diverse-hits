@@ -1,0 +1,7 @@
+{
+    "score_threshold": 0.5,
+    "distance_threshold": 0.7,
+    "time_budget": 600,
+    "sample_budget": 10000,
+    "n_jobs": 8
+}

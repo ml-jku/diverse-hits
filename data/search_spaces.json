@@ -1,0 +1,329 @@
+{
+    "AugHC": {
+        "batch_size": [
+            "randint",
+            [
+                128,
+                512
+            ]
+        ],
+        "learning_rate": [
+            "loguniform",
+            [
+                0.0001,
+                0.001
+            ]
+        ],
+        "sigma": [
+            "uniform",
+            [
+                100.0,
+                500.0
+            ]
+        ],
+        "topk": [
+            "uniform",
+            [
+                0.15,
+                0.35
+            ]
+        ]
+    },
+    "AugMemory": {
+        "augmentation_rounds": [
+            "randint",
+            [
+                1,
+                7
+            ]
+        ],
+        "batch_size": [
+            "randint",
+            [
+                32,
+                128
+            ]
+        ],
+        "learning_rate": [
+            "loguniform",
+            [
+                0.0001,
+                0.001
+            ]
+        ],
+        "replay_buffer_size": [
+            "randint",
+            [
+                32,
+                128
+            ]
+        ],
+        "sigma": [
+            "uniform",
+            [
+                100.0,
+                500.0
+            ]
+        ]
+    },
+    "BestAgentReminder": {
+        "alpha": [
+            "uniform",
+            [
+                0.3,
+                0.7
+            ]
+        ],
+        "batch_size": [
+            "randint",
+            [
+                16,
+                256
+            ]
+        ],
+        "learning_rate": [
+            "loguniform",
+            [
+                0.0001,
+                0.001
+            ]
+        ],
+        "sigma": [
+            "uniform",
+            [
+                100.0,
+                500.0
+            ]
+        ]
+    },
+    "GA": {
+        "mutation_rate": [
+            "loguniform",
+            [
+                0.001,
+                0.1
+            ]
+        ],
+        "offspring_size": [
+            "randint",
+            [
+                50,
+                500
+            ]
+        ],
+        "population_size": [
+            "randint",
+            [
+                50,
+                500
+            ]
+        ]
+    },
+    "Gflownet": {
+        "learning_rate": [
+            "loguniform",
+            [
+                1e-05,
+                0.001
+            ]
+        ],
+        "momentum": [
+            "uniform",
+            [
+                0.5,
+                0.9
+            ]
+        ],
+        "sampling_tau": [
+            "uniform",
+            [
+                0.8,
+                0.99
+            ]
+        ]
+    },
+    "GflownetDF": {
+        "learning_rate": [
+            "loguniform",
+            [
+                1e-05,
+                0.001
+            ]
+        ],
+        "momentum": [
+            "uniform",
+            [
+                0.5,
+                0.9
+            ]
+        ],
+        "sampling_tau": [
+            "uniform",
+            [
+                0.8,
+                0.99
+            ]
+        ]
+    },
+    "LSTM-HC": {
+        "mols_to_sample": [
+            "randint",
+            [
+                8,
+                2048
+            ]
+        ],
+        "optimize_n_epochs": [
+            "randint",
+            [
+                1,
+                6
+            ]
+        ]
+    },
+    "LSTM-PPO": {
+        "batch_size": [
+            "randint",
+            [
+                64,
+                1024
+            ]
+        ],
+        "clip_param": [
+            "uniform",
+            [
+                0.1,
+                0.6
+            ]
+        ],
+        "entropy_weight": [
+            "uniform",
+            [
+                0.01,
+                1.0
+            ]
+        ],
+        "episode_size": [
+            "randint",
+            [
+                64,
+                4096
+            ]
+        ],
+        "kl_div_weight": [
+            "randint",
+            [
+                1,
+                10
+            ]
+        ]
+    },
+    "Mars": {
+        "batch_size": [
+            "randint",
+            [
+                64,
+                512
+            ]
+        ],
+        "n_layers": [
+            "randint",
+            [
+                1,
+                4
+            ]
+        ],
+        "num_mols": [
+            "randint",
+            [
+                32,
+                512
+            ]
+        ]
+    },
+    "Mimosa": {
+        "lamb": [
+            "uniform",
+            [
+                0.1,
+                10.0
+            ]
+        ],
+        "population_size": [
+            "randint",
+            [
+                50,
+                200
+            ]
+        ],
+        "train_epoch": [
+            "randint",
+            [
+                1,
+                10
+            ]
+        ]
+    },
+    "Reinvent": {
+        "batch_size": [
+            "randint",
+            [
+                256,
+                512
+            ]
+        ],
+        "experience_replay": [
+            "randint",
+            [
+                0,
+                64
+            ]
+        ],
+        "learning_rate": [
+            "loguniform",
+            [
+                1e-05,
+                0.01
+            ]
+        ],
+        "sigma": [
+            "uniform",
+            [
+                100.0,
+                600.0
+            ]
+        ]
+    },
+    "SmilesGA": {
+        "gene_size": [
+            "randint",
+            [
+                100,
+                600
+            ]
+        ],
+        "n_mutations": [
+            "randint",
+            [
+                100,
+                300
+            ]
+        ],
+        "population_size": [
+            "randint",
+            [
+                50,
+                200
+            ]
+        ]
+    },
+    "Stoned": {
+        "generation_size": [
+            "randint",
+            [
+                50,
+                1000
+            ]
+        ]
+    }
+}
