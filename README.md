@@ -1,5 +1,11 @@
 # diverse-hits
-![graphic_abstract](https://github.com/ml-jku/diverse-efficiency/blob/main/notebooks/figures/graphic_abstract.png)
+![Tests](https://github.com/ml-jku/diverse-hits/actions/workflows/test_main.yml/badge.svg?branch=main)
+<a target="_blank" href="https://colab.research.google.com/github/ml-jku/diverse-hits/blob/main/example.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
+
+![graphic_abstract](https://github.com/ml-jku/diverse-hits/blob/main/notebooks/figures/graphic_abstract.png?raw=true)
 
 This repository contains the code associated to the paper
 **Diverse Hits in de Novo Molecule Design: A Diversity-based Comparison of Goal-directed Generators**. In this study we compared 14 goal-directed generators in their ability to generate diverse, high-scoring molecules under different compute constraints.

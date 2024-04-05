@@ -1,8 +1,7 @@
-/data/guacamol_v1*
+/data/guacamol_v1*.smiles
 
 runs/
 /runs*/
-# notebooks/figures/
 test/test_runs/*/*.csv
 test/test_runs/*/metrics.json
 
