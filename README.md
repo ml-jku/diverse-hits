@@ -3,7 +3,7 @@
 <a target="_blank" href="https://colab.research.google.com/github/ml-jku/diverse-hits/blob/main/example.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11004835.svg)](https://doi.org/10.5281/zenodo.11004835)
 
 ![graphic_abstract](https://github.com/ml-jku/diverse-hits/blob/main/notebooks/figures/graphic_abstract.png?raw=true)
 
@@ -133,6 +133,9 @@ python scripts/run_directory.py --base_dir runs/best_variance_time_nodf
 
 ## Visualize results
 All the plots and tables are created in jupyter notebooks in the `notebooks` folder.
+
+To reproduce figures/tables in the paper, first download the results from the [Zenodo repository](https://doi.org/10.5281/zenodo.11004835) and extract them to the `runs` folder.
+
 
 - `barplots.ipynb`: Main results as barplots + variants not in the paper.
 - `hyperparameter_table.ipynb`: Hyperparameter search spaces and selected parameters.

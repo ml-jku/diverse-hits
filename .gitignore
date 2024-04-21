@@ -1,19 +1,14 @@
-/data/guacamol_v1*.smiles
+data/guacamol_v1*.smiles
 
-runs/
-/runs*/
+runs*/
+runs*.tar.gz
 test/test_runs/*/*.csv
 test/test_runs/*/metrics.json
 
 .vscode/
-# .idea/
-
 __pycache__
 
-/trash/
-
-/notebooks/briem_lessel_plots/BLSets*
-/settings.json
+notebooks/briem_lessel_plots/BLSets*
+settings.json
 
 **/*.egg-info
-runs*
