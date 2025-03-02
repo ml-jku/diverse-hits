@@ -8,7 +8,7 @@
 ![graphic_abstract](https://github.com/ml-jku/diverse-hits/blob/main/notebooks/figures/graphic_abstract.png?raw=true)
 
 This repository contains the code associated to the paper
-**Diverse Hits in de Novo Molecule Design: A Diversity-based Comparison of Goal-directed Generators** ([OpenReview](https://openreview.net/forum?id=YO3d6e0ahp)). In this study we compared 14 goal-directed generators in their ability to generate diverse, high-scoring molecules under different compute constraints.
+[**Diverse Hits in de Novo Molecule Design: A Diversity-based Comparison of Goal-directed Generators**](https://pubs.acs.org/doi/10.1021/acs.jcim.4c00519). In this study we compared 14 goal-directed generators in their ability to generate diverse, high-scoring molecules under different compute constraints.
 
 This repository contains the code to:
 - Benchmark your own optimizer using the setup described in the paper. 
