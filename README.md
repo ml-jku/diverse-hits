@@ -22,8 +22,8 @@ Feel free to raise an issue if you have any questions or problems with the code.
 ## Setup
 Clone the git repository:
 ```
-git clone https://github.com/renzph/diverse-efficiency.git
-cd diverse-efficiency
+git clone https://github.com/ml-jku/diverse-hits.git
+cd diverse-hits
 ```
 
 ### Setup to test your own optimizer
